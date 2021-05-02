@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>form2</title>
+
+<script>
+function validateForm()
+{
+var x=document.form2.name.value;
+var y=document.form2.pincode.value;
+if(x==null || x=="")
+{
+alert("Please enter the name");
+document.form2.name.focus();
+return false;
+}
+if(y=="")
+{
+alert("Please enter pincode properly");
+document.form2.pincode.focus();
+return false;
+}
+if(isNaN(y))
+{
+alert("Please enter a number");
+document.form2.pincode.focus();
+return false;
+}
+if(y.length!=6)
+{
+alert("Please enter a 6 digit number");
+document.form2.pincode.focus();
+return false;
+}
+}
+</script>
+<style type="text/css">
+h1 {
+border-style: dotted;
+font-family: Arial,Helvetica,sans-serif;
+text-transform: uppercase;
+text-decoration: none;
+text-align: center;
+background-color: #99ff99;
+}
+</style>
+</head><body>
+<form onsubmit="return validateForm()" method="post" action="form2.html" name="form2">
+<h1> &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;GUJARAT TOURISM&nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</h1>
+<label>Name &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;:</label> <input name="name"><br>
+<br>
+<label>Pincode &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; :</label><input maxlength="6" name="pincode"><br>
+<br>
+<input name="Submit" value="Submit" type="submit"><br>
+<br>
+<br>
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</body></html>
